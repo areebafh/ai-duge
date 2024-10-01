@@ -1,0 +1,486 @@
+$color_1: var(--text-color);
+$color_2: var(--primary-color);
+$color_3: var(--background-color);
+$color_4: var(--text-color-2);
+$color_5: var(--text-color-3);
+$font-family_1: var(--font-family);
+$background-color_1: var(--background-color);
+$background-color_2: var(--primary-color);
+
+/* define root colors variable */
+/* import and define font  */
+@font-face {
+	font-family: 'gloriahallelujah';
+/* Choose a name for your font */
+	src: url('../fonts/gloriahallelujah.ttf') format('truetype');
+/* Update the path to your font file */
+	font-weight: normal;
+/* Adjust as necessary */
+	font-style: normal;
+/* Adjust as necessary */
+}
+/* applying font to body */
+/* applying style to header section */
+/* applying style to logo section */
+/* applying style to main navigation area */
+/* applying style to the action button */
+/* applying style to the hero section */
+/* applying style to hero logo */
+/* applying style to the hero heading */
+/* applying style to the hero input */
+/* info section start  */
+/* roadmappy section :start */
+/* tokenomicals start */
+/* 
+===================================================
+   End of the styles, thanks for reading!
+   Have a good day! Bye bye :)
+===================================================
+*/
+&:root {
+	--primary-color: #0B1D88;
+	--secondary-color: #2ecc71;
+	--text-color: #000000;
+	--text-color-2: #F5F89D;
+	--text-color-3: #8EF1FF;
+	--background-color: #f8f9fa;
+	--font-family: 'gloriahallelujah', sans-serif;
+}
+body {
+	font-family: $font-family_1;
+	color: $color_1;
+	background-color: $background-color_1;
+	line-height: 1.6;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	margin-bottom: 1rem;
+	color: $color_2;
+	font-size: 2.5rem;
+}
+h2 {
+	margin-bottom: 1rem;
+	color: $color_2;
+	font-size: 2rem;
+}
+h3 {
+	margin-bottom: 1rem;
+	color: $color_2;
+	font-size: 1.75rem;
+}
+h4 {
+	margin-bottom: 1rem;
+	color: $color_2;
+	font-size: 1.5rem;
+}
+h5 {
+	margin-bottom: 1rem;
+	color: $color_2;
+	font-size: 1.25rem;
+}
+h6 {
+	margin-bottom: 1rem;
+	color: $color_2;
+	font-size: 1rem;
+}
+p {
+	margin-bottom: 1rem;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.container-fluid {
+	width: 100%;
+	padding: 0 15px;
+}
+.btn {
+	display: inline;
+	background-color: $background-color_2;
+	padding: 8px 20px;
+	border-radius: 12px;
+}
+.background-wrapper-primary {
+	padding-bottom: 50px;
+	position: relative;
+	background: rgb(226, 211, 85);
+	background: linear-gradient(147deg, rgba(226, 211, 85, 1) 0%, rgba(188, 225, 162, 1) 58%);
+	min-height: 800px;
+	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 1;
+		z-index: 1;
+		background-image: url('../img/background-fill.png');
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 1;
+		z-index: 1;
+	}
+}
+.inner-content {
+	position: relative;
+	z-index: 2;
+}
+header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo-dark-header {
+	max-width: 200px;
+	height: auto;
+}
+.header-navigation-menu {
+	ul {
+		list-style: none;
+		li {
+			float: left;
+			margin-right: 25px;
+			a {
+				text-transform: uppercase;
+				color: $color_2;
+			}
+		}
+	}
+}
+.action-button {
+	background-color: $background-color_2;
+	padding: 8px 20px;
+	border-radius: 12px;
+	a {
+		text-transform: uppercase;
+		color: $color_3;
+	}
+}
+.hero-section {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo-hero {
+	width: 450px;
+	height: auto;
+}
+.hero-heading {
+	text-transform: uppercase;
+	font-size: 38px;
+	color: $color_1;
+}
+.input-subscribe {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	input[type="text"] {
+		width: 100%;
+		padding: 25px 0px;
+		padding-left: 30px;
+		padding-right: 80px;
+		border-radius: 18px;
+	}
+}
+.input-tag {
+	margin-left: -90px;
+	position: relative;
+	color: $color_3;
+	cursor: pointer;
+}
+.social-buttons {
+	margin-top: 30px;
+	a {
+		color: $color_4;
+	}
+	.btn {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.card-ai {
+	margin-top: 80px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	h1 {
+		font-size: 40px;
+		color: $color_2;
+		text-transform: uppercase;
+	}
+	h4 {
+		font-size: 22px;
+		color: $color_1;
+		text-transform: uppercase;
+	}
+}
+.text-container {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	text-align: center;
+	z-index: 2;
+	padding: 20px 80px;
+	color: $color_2;
+}
+.card-buy {
+	margin-top: 80px;
+	text-align: center;
+	.inner-frames {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+	}
+	.frame {
+		overflow: hidden;
+		position: relative;
+	}
+	.banner-image {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.text-container {
+		padding: 0px;
+		padding: 0px 40px;
+		margin-left: 25px;
+		top: 52%;
+	}
+}
+.text-card {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	h4 {
+		font-size: 12px;
+		text-align: left;
+	}
+}
+.background-wrapper-secondary {
+	background: rgb(245, 248, 187);
+	background: linear-gradient(184deg, rgba(245, 248, 187, 1) 0%, rgba(182, 237, 244, 1) 100%);
+	min-height: 2500px;
+	position: relative;
+	overflow: hidden;
+	.container {
+		position: relative;
+		z-index: 5;
+	}
+}
+.image-bg-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1000px;
+	object-fit: cover;
+	z-index: 1;
+}
+.section-powered {
+	text-align: center;
+	margin-top: 40px;
+	.frame {
+		img {
+			width: 100%;
+		}
+	}
+	.text-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		top: 0;
+		margin-top: 220px;
+		.text-card {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 20px 0px;
+			img {
+				width: 50px;
+				height: auto;
+			}
+			h4 {
+				margin-bottom: 0px;
+				font-size: 18px;
+				margin-left: 10px;
+				color: $color_1;
+			}
+		}
+	}
+}
+.infosection {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 60px;
+	.left {
+		width: 60%;
+		img {
+			width: 100%;
+		}
+	}
+	.right {
+		width: 40%;
+		img {
+			width: 100%;
+		}
+	}
+}
+.frame-1 {
+	position: relative;
+	.infosec-text-container {
+		top: 0;
+		margin-top: 100px;
+		max-width: 400px;
+		margin-left: 20px;
+		position: absolute;
+	}
+}
+.frame-2 {
+	position: relative;
+	.infosec-text-container {
+		top: 0;
+		right: 0;
+		margin-top: 100px;
+		max-width: 400px;
+		margin-right: 10px;
+		position: absolute;
+	}
+}
+.infosec-text-container {
+	h4 {
+		color: $color_5;
+	}
+}
+.roadmappy-wrapper {
+	margin-top: 60px;
+	h2 {
+		text-align: center;
+	}
+}
+.roadmappy {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 20px;
+	.frame-img {
+		width: 100%;
+		height: auto;
+	}
+	.frame {
+		position: relative;
+	}
+}
+.roadmappy-text-container {
+	position: absolute;
+	top: 0;
+	margin-top: 40px;
+	max-width: 210px;
+	margin-left: 15px;
+}
+.tokenomicals {
+	position: relative;
+}
+.frame-tokenomicals {
+	width: 100%;
+	margin-top: 70px;
+}
+.tokenomicals-text-container {
+	position: absolute;
+	top: 0;
+	margin-top: 180px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.section {
+		margin-top: 20px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 950px;
+		ul {
+			list-style: none;
+			li {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+footer {
+	padding: 20px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.left {
+		p {
+			margin-bottom: 0px;
+		}
+	}
+	.right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		ul {
+			list-style: none;
+			margin-left: 20px;
+			li {
+				float: left;
+				margin-left: 10px;
+				background-color: $background-color_1;
+				border-radius: 12px;
+				width: 50px;
+				height: 20px;
+				border-radius: 20%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				i {
+					color: $color_1;
+					font-size: 22px;
+				}
+			}
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

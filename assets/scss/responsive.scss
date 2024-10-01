@@ -1,0 +1,339 @@
+$color_1: var(--primary-color);
+$color_2: var(--text-color);
+
+/* Large Desktops (1025px and above) */
+/* Small Desktop (769px to 1024px) */
+/* Adjust layout for smaller desktops */
+/* applying style to hero logo */
+/* applying style to the hero heading */
+/* Tablet Layout (601px to 768px) */
+/* Mobile Layout (up to 600px) */
+/* Adjust layout for mobile devices */
+/* applying style to logo section */
+
+@media only screen and (max-width: 1024px) {
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1.25rem;
+	}
+	h4 {
+		font-size: 1.0rem;
+	}
+	h5 {
+		font-size: 0.75rem;
+	}
+	h6 {
+		font-size: 0.5rem;
+	}
+	.container {
+		margin: 0 auto;
+		padding: 0 30px;
+	}
+	.header-navigation-menu {
+		display: none;
+	}
+	.logo-hero {
+		width: 350px;
+		height: auto;
+	}
+	.hero-heading {
+		font-size: 30px;
+	}
+	.hero-section {
+		.right {
+			img {
+				width: 80%;
+			}
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	.card-ai {
+		h1 {
+			font-size: 30px;
+			color: $color_1;
+			text-transform: uppercase;
+		}
+		h4 {
+			font-size: 17px;
+			color: $color_2;
+			text-transform: uppercase;
+		}
+		img {
+			height: 280px;
+		}
+	}
+	.card-buy {
+		.inner-frames {
+			margin: 0 auto;
+			max-width: 550px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	.section-powered {
+		.frame {
+			.frame-vector {
+				min-height: 600px;
+			}
+		}
+		.text-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			top: 0;
+			margin-top: 300px;
+		}
+	}
+	.frame-1 {
+		.infosec-text-container {
+			top: 0;
+			margin-top: 100px;
+			max-width: 300px;
+			margin-left: 20px;
+			position: absolute;
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	.frame-2 {
+		.infosec-text-container {
+			top: 0;
+			margin-top: 100px;
+			max-width: 300px;
+			margin-left: 35px;
+			position: absolute;
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	.infosection {
+		.left {
+			width: 100%;
+		}
+		.right {
+			display: none;
+		}
+	}
+	.roadmappy {
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0 auto;
+		max-width: 550px;
+	}
+	.frame-tokenomicals {
+		margin-top: 10px;
+	}
+	.tokenomicals-text-container {
+		margin-top: 60px;
+		padding: 0px 40px;
+		.section {
+			margin-top: 0px;
+		}
+		li {
+			font-size: 12px;
+		}
+	}
+	footer {
+		.left {
+			p {
+				font-size: 12px;
+			}
+		}
+		.right {
+			p {
+				font-size: 12px;
+				margin-bottom: 0;
+			}
+			ul {
+				li {
+					width: 40px;
+					height: 15px;
+					i {
+						color: $color_2;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.hero-section {
+		flex-direction: column-reverse;
+		.right {
+			img {
+				width: 100%;
+			}
+			display: flex;
+			justify-content: center;
+		}
+		.left {
+			width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.logo-dark-header {
+		max-width: 120px;
+		margin-bottom: 0px;
+	}
+	.action-button {
+		padding: 6px 15px;
+		font-size: 12px;
+		border-radius: 12px;
+	}
+	.logo-hero {
+		width: 250px;
+		height: auto;
+	}
+	.hero-heading {
+		font-size: 17px;
+	}
+	.input-subscribe {
+		input[type="text"] {
+			width: 100%;
+			padding: 20px 0px;
+			padding-left: 25px;
+			padding-right: 75px;
+			border-radius: 18px;
+		}
+	}
+	.hero-section {
+		.right {
+			img {
+				width: 50%;
+			}
+		}
+	}
+	.card-ai {
+		h1 {
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 12px;
+			color: $color_2;
+			text-transform: uppercase;
+		}
+		img {
+			height: 200px;
+		}
+	}
+	.text-container {
+		padding: 20px 30px;
+	}
+	.card-buy {
+		h1 {
+			font-size: 20px;
+		}
+		.inner-frames {
+			margin: 0 auto;
+			max-width: 300px;
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.text-container {
+			margin-left: 40px;
+		}
+	}
+	.section-powered {
+		.frame-vector {
+			height: 650px;
+			display: none;
+		}
+		.text-container {
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			column-gap: 0px;
+			position: relative;
+			margin-top: 0px;
+			margin: 0px;
+			top: 0;
+			left: 0;
+			width: 100%;
+			transform: translateY(0);
+			padding: 0px;
+			margin-left: -10px;
+			.text-card {
+				img {
+					width: 30px;
+					height: auto;
+				}
+				h4 {
+					margin-bottom: 0px;
+					font-size: 12px;
+					font-size: 12px;
+				}
+				margin: 20px 20px;
+			}
+		}
+	}
+	.frame-1 {
+		.infosec-text-container {
+			top: 0;
+			margin-top: 40px;
+			max-width: 150px;
+			margin-left: 20px;
+			position: absolute;
+			p {
+				font-size: 8px;
+			}
+			h4 {
+				margin-bottom: 0px;
+				font-size: 12px;
+			}
+		}
+	}
+	.frame-2 {
+		.infosec-text-container {
+			top: 0;
+			margin-top: 50px;
+			max-width: 150px;
+			margin-left: 35px;
+			position: absolute;
+			p {
+				margin-top: 0px;
+				font-size: 6px;
+			}
+			h4 {
+				margin-bottom: 0px;
+				font-size: 12px;
+			}
+		}
+	}
+	.roadmappy {
+		grid-template-columns: repeat(1, 1fr);
+		margin: 0 auto;
+		max-width: 550px;
+	}
+	.frame-tokenomicals {
+		display: none;
+	}
+	.tokenomicals-text-container {
+		display: none;
+		position: relative;
+	}
+	footer {
+		flex-direction: column;
+		.right {
+			flex-direction: column;
+			ul {
+				list-style: none;
+				margin-left: 0px;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+
+/* 
+===================================================
+   End of the styles, thanks for reading!
+   Have a good day! Bye bye :)
+===================================================
+*/
+

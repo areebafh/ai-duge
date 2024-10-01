@@ -1,0 +1,562 @@
+/* define root colors variable */
+:root {
+    --primary-color: #0B1D88;
+    /* Example primary color */
+    --secondary-color: #2ecc71;
+    /* Example secondary color */
+    --text-color: #000000;
+    /* Text color */
+    --text-color-2: #F5F89D;
+    --text-color-3:#8EF1FF;
+    /* Text color */
+    --background-color: #f8f9fa;
+    /* Background color */
+    --font-family: 'gloriahallelujah', sans-serif;
+    /* Default font */
+}
+
+/* import and define font  */
+
+@font-face {
+    font-family: 'gloriahallelujah';
+    /* Choose a name for your font */
+    src: url('../fonts/gloriahallelujah.ttf') format('truetype');
+    /* Update the path to your font file */
+    font-weight: normal;
+    /* Adjust as necessary */
+    font-style: normal;
+    /* Adjust as necessary */
+}
+
+/* applying font to body */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline;
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 12px;
+}
+
+
+.background-wrapper-primary {
+    padding-bottom: 50px;
+    position: relative;
+    /* Required for absolute positioning of overlays */
+    background: rgb(226, 211, 85);
+    background: linear-gradient(147deg, rgba(226, 211, 85, 1) 0%, rgba(188, 225, 162, 1) 58%);
+    min-height: 800px;
+    overflow: hidden;
+    /* Prevents overflow from the images */
+}
+
+.background-wrapper-primary::before,
+.background-wrapper-primary::after {
+    content: '';
+    position: absolute;
+    /* Positioning the overlay images */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    /* Ensure images cover the area */
+    background-position: center;
+    /* Center the images */
+    background-repeat: no-repeat;
+    opacity: 1;
+    /* Adjust opacity for overlay effect */
+    z-index: 1;
+    /* Make sure the images are behind the content */
+}
+
+.background-wrapper-primary::before {
+    background-image: url('../img/background-fill.png');
+    /* First image */
+}
+
+.inner-content {
+    position: relative;
+    /* Positioning for content to be on top of overlays */
+    z-index: 2;
+    /* Ensure content is above the overlays */
+    /* Add any additional styles for your content here */
+}
+
+/* applying style to header section */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* applying style to logo section */
+.logo-dark-header {
+    max-width: 200px;
+    height: auto;
+}
+
+/* applying style to main navigation area */
+.header-navigation-menu ul {
+    list-style: none;
+}
+
+.header-navigation-menu ul li {
+    float: left;
+    margin-right: 25px;
+}
+
+.header-navigation-menu ul li a {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+/* applying style to the action button */
+.action-button {
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 12px;
+}
+
+.action-button a {
+    text-transform: uppercase;
+    color: var(--background-color);
+}
+
+/* applying style to the hero section */
+.hero-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* applying style to hero logo */
+.logo-hero {
+    width: 450px;
+    height: auto;
+}
+
+/* applying style to the hero heading */
+.hero-heading {
+    text-transform: uppercase;
+    font-size: 38px;
+    color: var(--text-color);
+}
+
+/* applying style to the hero input */
+
+.input-subscribe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.input-subscribe input[type="text"] {
+    width: 100%;
+    padding: 25px 0px;
+    padding-left: 30px;
+    padding-right: 80px;
+    border-radius: 18px;
+}
+
+.input-tag {
+    margin-left: -90px;
+    position: relative;
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.social-buttons {
+    margin-top: 30px;
+}
+
+.social-buttons a {
+    color: var(--text-color-2);
+}
+
+.social-buttons .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-ai {
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-ai img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+    padding: 20px 80px;
+    color: var(--primary-color);
+}
+
+.card-ai h1 {
+    font-size: 40px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.card-ai h4 {
+    font-size: 22px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.card-buy {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.card-buy .inner-frames {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* Added gap */
+}
+
+.card-buy .frame {
+    overflow: hidden;
+    /* Prevent overflow */
+    position: relative;
+    /* Helps with absolute positioning if needed */
+}
+
+.card-buy .banner-image {
+    width: 100%;
+    /* Ensures image fills the frame */
+    height: auto;
+    /* Maintains aspect ratio */
+    display: block;
+    /* Remove bottom space below images */
+}
+
+.text-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.text-card h4 {
+    font-size: 12px;
+    text-align: left;
+}
+
+.card-buy .text-container {
+    padding: 0px;
+    padding: 0px 40px;
+    margin-left: 25px;
+    top: 52%;
+}
+
+
+.background-wrapper-secondary {
+    background: rgb(245, 248, 187);
+    background: linear-gradient(184deg, rgba(245, 248, 187, 1) 0%, rgba(182, 237, 244, 1) 100%);
+    /* min-height: 2500px; */
+    position: relative;
+    overflow: hidden;
+}
+.image-bg-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    z-index: 1; 
+}
+
+.background-wrapper-secondary .container {
+    position: relative; 
+    z-index: 5; 
+}
+
+.section-powered{
+    text-align: center;
+    margin-top: 40px;
+}
+.section-powered .frame img{
+    width: 100%;
+}
+
+.section-powered .text-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    margin-top: 220px;
+}
+.section-powered .text-container .text-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px;
+}
+.section-powered .text-container .text-card img{
+    width: 50px;
+    height: auto;
+}
+.section-powered .text-container .text-card h4{
+   margin-bottom: 0px;
+   font-size: 18px;
+   margin-left: 10px;
+   color: var(--text-color);
+}
+
+/* info section start  */
+.infosection{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 60px ;
+}
+
+.infosection .left{
+    width: 60%;
+}
+
+.infosection .left img{
+    width: 100%;
+}
+
+.infosection .right{
+    width: 40%;
+}
+
+.infosection .right img{
+    width: 100%;
+}
+
+.frame-1{
+    position: relative;
+}
+.frame-1 .infosec-text-container {
+    top: 0;
+    margin-top: 100px;
+    max-width: 400px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.frame-2{
+    position: relative;
+}
+.frame-2 .infosec-text-container {
+    top: 0;
+    right: 0;
+    margin-top: 100px;
+    max-width: 400px;
+    margin-right: 10px;
+    position: absolute;
+}
+
+.infosec-text-container h4{
+    color: var(--text-color-3);
+}
+
+/* roadmappy section :start */
+.roadmappy-wrapper {
+    margin-top: 60px;
+}
+.roadmappy-wrapper h2{
+    text-align: center;
+}
+.roadmappy{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px ;
+}
+
+.roadmappy .frame-img{
+    width: 100%;
+    height: auto;
+}
+
+.roadmappy .frame{
+    position: relative;
+}
+
+.roadmappy-text-container{
+    position: absolute;
+    top: 0;
+    margin-top: 40px;
+    max-width: 210px;
+    margin-left: 15px;
+}
+
+/* tokenomicals start */
+
+
+.tokenomicals{
+    position: relative;
+}
+
+.frame-tokenomicals{
+    width: 100%;
+    margin-top: 70px;
+}
+
+.tokenomicals-text-container{
+    position: absolute;
+    top: 0;
+    margin-top: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tokenomicals-text-container .section{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 950px;
+}
+
+.tokenomicals-text-container .section ul{
+    list-style: none;
+}
+
+.tokenomicals-text-container .section ul li{
+    margin-top: 20px;
+}
+
+footer{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .left p{
+    margin-bottom: 0px;
+}
+footer .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .right ul{
+    list-style: none;
+    margin-left: 20px;
+}
+
+footer .right ul li{
+    float: left;
+    margin-left: 10px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    width: 50px;
+    height: 20px;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+footer .right p{
+    margin-bottom: 0;
+}
+footer .right ul li i{
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+/* 
+===================================================
+   End of the styles, thanks for reading!
+   Have a good day! Bye bye :)
+===================================================
+*/
